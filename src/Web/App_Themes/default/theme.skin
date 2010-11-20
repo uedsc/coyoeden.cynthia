@@ -1,0 +1,66 @@
+<%@ Register Namespace="Cynthia.Web.UI" Assembly="Cynthia.Web" TagPrefix="portal" %>
+<%@ Register Namespace="Cynthia.Web.Controls" Assembly="Cynthia.Web.Controls" TagPrefix="cy" %>
+
+<%--
+
+@@@IMPORTANT@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+it is better to only set css classes here in the theme
+because themes are cached and if you only use css then
+page level and user level skins will over-ride the default
+skin correctly because the css will adapt to the current Cynthia skin 
+but if you use other style properties the cached skin will be applied.
+Also using the style properties results in inline styles on
+the rendered markup which makes page size larger
+and therefore slower performance
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+--%>
+
+<cy:CornerRounderTop runat="server"
+        DoRounding="true"
+        />
+        
+     <cy:CornerRounderBottom runat="server"
+        DoRounding="true"
+        />
+		
+		<portal:CPanel runat="server" RenderArtisteer="true" />
+		<portal:ModuleTitleControl runat="server" RenderArtisteer="true" />
+		<portal:CButton runat="server" RenderArtisteer="true" CssClass="art-button" />
+		
+		<%-- this clears hard coded style from validators --%>
+		<asp:ValidationSummary runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RangeValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RequiredFieldValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RegularExpressionValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CompareValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CustomValidator runat="server" ForeColor="" CssClass="txterror" />
+    
+    <%--  this is the EventCalendar  --%>
+     <cy:DataCalendar runat="server"
+     CaptionAlign="Top"
+        DayNameFormat="Short"
+        FirstDayOfWeek="sunday"
+             NextMonthText="+"
+             NextPrevFormat="CustomText"
+            NextPrevStyle-BorderStyle="None"
+            NextPrevStyle-BorderWidth="0px"
+            DayHeaderStyle-BorderStyle="None"
+            DayHeaderStyle-BorderWidth="0px"
+            OtherMonthDayStyle-BorderWidth="0px"
+            DayStyle-BorderWidth="0px"
+            SelectorStyle-BorderWidth="0px"
+            SelectorStyle-BorderStyle="None"
+            TitleStyle-BorderWidth="0px"
+            TitleStyle-BorderStyle="None"
+           
+            PrevMonthText="-"
+            ShowDayHeader="true"
+             ShowGridLines="true"
+             ShowNextPrevMonth="true"
+             ShowTitle="true"
+             TitleFormat="MonthYear"
+   
+    />
+    
