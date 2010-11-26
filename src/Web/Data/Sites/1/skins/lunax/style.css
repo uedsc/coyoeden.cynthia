@@ -417,8 +417,8 @@ div.addthisbutton { position:absolute; top:60px; right:10px; }
 .linkdescription { padding:5px; }
 .clear,.eventcalendar table { clear:both; }
 .logolist,.pageicons,.skiplink { display:none; }
-.forumnotify { white-space:nowrap; vertical-align:middle; padding: 10px 0px 5px 0px; }
-.forumnotify img {float:left;}
+.groupnotify { white-space:nowrap; vertical-align:middle; padding: 10px 0px 5px 0px; }
+.groupnotify img {float:left;}
 
 /* Content Styles */
 .floatrightimage { float:right; margin-right:15px; }
