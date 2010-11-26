@@ -67,6 +67,78 @@ namespace Cynthia.Web {
         protected global::Cynthia.Web.UI.ScriptLoader ScriptLoader1;
         
         /// <summary>
+        /// frmMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmMain;
+        
+        /// <summary>
+        /// SiteMapData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapData;
+        
+        /// <summary>
+        /// PageMapDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource PageMapDataSource;
+        
+        /// <summary>
+        /// ChildPageSiteMapData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource ChildPageSiteMapData;
+        
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// SiteTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SiteTitle SiteTitle;
+        
+        /// <summary>
+        /// SkipLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SkipLink SkipLink1;
+        
+        /// <summary>
+        /// SiteMenu1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SiteMenu SiteMenu1;
+        
+        /// <summary>
         /// WelcomeMessage control.
         /// </summary>
         /// <remarks>
@@ -130,13 +202,58 @@ namespace Cynthia.Web {
         protected global::Cynthia.Web.UI.MemberListLink MemberListLink;
         
         /// <summary>
-        /// SiteMenu1 control.
+        /// RegisterLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Cynthia.Web.UI.SiteMenu SiteMenu1;
+        protected global::Cynthia.Web.UI.RegisterLink RegisterLink;
+        
+        /// <summary>
+        /// SearchInput1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SearchInput SearchInput1;
+        
+        /// <summary>
+        /// LoginLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.LoginLink LoginLink;
+        
+        /// <summary>
+        /// LogoutLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.LogoutLink LogoutLink;
+        
+        /// <summary>
+        /// InsecurePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.Controls.InsecurePanel InsecurePanel1;
+        
+        /// <summary>
+        /// at2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.CAddThisButton at2;
         
         /// <summary>
         /// divAlt1 control.
@@ -155,51 +272,6 @@ namespace Cynthia.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder altContent1;
-        
-        /// <summary>
-        /// frmMain control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmMain;
-        
-        /// <summary>
-        /// SiteMapData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapData;
-        
-        /// <summary>
-        /// PageMapDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource PageMapDataSource;
-        
-        /// <summary>
-        /// ChildPageSiteMapData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource ChildPageSiteMapData;
-        
-        /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
         /// divLeft control.
@@ -238,13 +310,13 @@ namespace Cynthia.Web {
         protected global::System.Web.UI.WebControls.Panel divCenter;
         
         /// <summary>
-        /// Breadcrumbs1 control.
+        /// Breadcrumbs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Cynthia.Web.UI.BreadcrumbsControl Breadcrumbs1;
+        protected global::Cynthia.Web.UI.BreadcrumbsControl Breadcrumbs;
         
         /// <summary>
         /// ChildPageMenu control.
@@ -281,6 +353,78 @@ namespace Cynthia.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder rightContent;
+        
+        /// <summary>
+        /// divAlt2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel divAlt2;
+        
+        /// <summary>
+        /// altContent2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder altContent2;
+        
+        /// <summary>
+        /// SiteMapLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SiteMapLink SiteMapLink1;
+        
+        /// <summary>
+        /// SkinPreview1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.SkinPreview SkinPreview1;
+        
+        /// <summary>
+        /// cl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.CopyrightLabel cl1;
+        
+        /// <summary>
+        /// lnkCynthia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.CynthiaLink lnkCynthia;
+        
+        /// <summary>
+        /// lnkw3cValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.XhtmlValidatorLink lnkw3cValidator;
+        
+        /// <summary>
+        /// lnkCSSVal1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Cynthia.Web.UI.CssValidatorLink lnkCSSVal1;
         
         /// <summary>
         /// ah1 control.
@@ -362,122 +506,5 @@ namespace Cynthia.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Cynthia.Web.UI.WoopraScript woopra11;
-        
-        /// <summary>
-        /// divAlt2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel divAlt2;
-        
-        /// <summary>
-        /// altContent2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder altContent2;
-        
-        /// <summary>
-        /// SiteMapLink1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.SiteMapLink SiteMapLink1;
-        
-        /// <summary>
-        /// SkinPreview1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.SkinPreview SkinPreview1;
-        
-        /// <summary>
-        /// cl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.CopyrightLabel cl1;
-        
-        /// <summary>
-        /// lnkCynthia control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.CynthiaLink lnkCynthia;
-        
-        /// <summary>
-        /// lnkw3cValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.XhtmlValidatorLink lnkw3cValidator;
-        
-        /// <summary>
-        /// lnkCSSVal1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Cynthia.Web.UI.CssValidatorLink lnkCSSVal1;
-        
-        /// <summary>
-        /// js_json control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SystemX.WebControls.SiteJScript js_json;
-        
-        /// <summary>
-        /// js_str control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SystemX.WebControls.SiteJScript js_str;
-        
-        /// <summary>
-        /// js_levin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SystemX.WebControls.SiteJScript js_levin;
-        
-        /// <summary>
-        /// js_imgSlider control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SystemX.WebControls.SiteJScript js_imgSlider;
-        
-        /// <summary>
-        /// js_home control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SystemX.WebControls.SiteJScript js_home;
     }
 }

@@ -466,7 +466,7 @@ namespace Cynthia.Web
 
             }
 
-            return "/Data/Sites/1/skins/styleshout-tecmania/style.css";
+            return "/Data/Sites/1/skins/styleshout-techmania/style.css";
         }
 
 
@@ -1187,8 +1187,8 @@ namespace Cynthia.Web
 
         public static string GetSkinName(bool allowPageOverride, Page page)
         {
-            
-            string currentSkin = "styleshout-refresh";
+
+            string currentSkin = "styleshout-techmania";
 
             SiteSettings siteSettings = CacheHelper.GetCurrentSiteSettings();
             PageSettings currentPage = CacheHelper.GetCurrentPage();

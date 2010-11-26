@@ -56,7 +56,7 @@ namespace Cynthia.Web.UI
 
             int siteId = SiteUtils.ParseSiteIdFromSkinRequestUrl();
 
-            string skinName = "styleshout-refresh";
+            string skinName = "styleshout-techmania";
             if (context.Request["skin"] != null)
             {
                 skinName = SiteUtils.SanitizeSkinParam(context.Request["skin"]);
