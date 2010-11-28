@@ -18,7 +18,7 @@
 		<input type="submit" class="submit sprite" value="<%=Resource.SearchButtonText %>" />
 		<div class="fancy-panel sprite clearfix" style="display: none;" id="search_cat">
 			<label class="main-cat"><input type="checkbox" name="f" value="00000000-0000-0000-0000-000000000000" class="all-cats" checked="checked" id="cbxscall"><span><%=Resource.SearchAllContentItem%></span></label>
-			<ul id="mlist">
+			<ul id="mlist" class="clearfix">
 			<% SearchableModules.ForEach(x=>{%>
 			<li><label><input type="checkbox" disabled="disabled" name="f" value="<%=x.FeatureGuid %>" checked="checked" class="sub-cat"/><span><%=ResourceHelper.GetResourceString(x.ResourceFile,x.SearchListName,true)%></span></label></li>
 			<%}); %>

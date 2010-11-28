@@ -14,13 +14,13 @@
         <LayoutTemplate>
         <asp:Panel ID="pnlLContainer" runat="server" DefaultButton="Login">
             <div class="settingrow">
-                <strong><cy:SiteLabel id="lblEmail" runat="server" ForControl="UserName"  ConfigKey="SignInEmailLabel"> </cy:SiteLabel>
-                <cy:SiteLabel id="lblUserID" runat="server" ForControl="UserName"  ConfigKey="ManageUsersLoginNameLabel"> </cy:SiteLabel></strong>
-                <br /><asp:TextBox ID="UserName" runat="server" Columns="35" MaxLength="100" />
+                <cy:SiteLabel id="lblEmail" runat="server" ForControl="UserName"  ConfigKey="SignInEmailLabel"> </cy:SiteLabel>
+                <cy:SiteLabel id="lblUserID" runat="server" ForControl="UserName"  ConfigKey="ManageUsersLoginNameLabel"> </cy:SiteLabel>
+                <asp:TextBox ID="UserName" runat="server" Columns="35" MaxLength="100" />
             </div>
             <div class="settingrow">
-                <strong><cy:SiteLabel id="lblPassword" runat="server" ForControl="Password" ConfigKey="SignInPasswordLabel"> </cy:SiteLabel></strong>
-                <br /><asp:TextBox ID="Password" runat="server" TextMode="password" />
+                <cy:SiteLabel id="lblPassword" runat="server" ForControl="Password" ConfigKey="SignInPasswordLabel"> </cy:SiteLabel>
+                <asp:TextBox ID="Password" runat="server" TextMode="password" />
             </div>
             <div class="settingrow">
                 <asp:CheckBox ID="RememberMe" runat="server" />

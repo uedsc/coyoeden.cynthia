@@ -4,11 +4,11 @@
 <asp:Content ContentPlaceHolderID="mainContent" ID="MPContent" runat="server">
 <portal:CPanel ID="mp1" runat="server" ArtisteerCssClass="art-Post" RenderArtisteerBlockContentDivs="true">
 <cy:CornerRounderTop id="ctop1" runat="server" />
-<asp:Panel id="pnlAdminMenu" runat="server" CssClass="art-Post-inner panelwrapper adminmenu">
+<asp:Panel id="pnlAdminMenu" runat="server" CssClass="panelwrapper adminmenu">
 <h2 class="moduletitle"><asp:Literal ID="litAdminHeading" runat="server" /></h2>
 <portal:CPanel ID="CynPanel1" runat="server" ArtisteerCssClass="art-PostContent">
-<div class="modulecontent">
-		<ul class="simplelist">
+    <div class="modulecontent">
+		<ul class="hlist clearfix">
 		    <li id="liSiteSettings" runat="server">
 		        <asp:HyperLink ID="lnkSiteSettings" runat="server" CssClass="lnkSiteSettings" />
 		    </li>
@@ -48,7 +48,6 @@
 		    <li id="liCoreData" runat="server">
 		        <asp:HyperLink ID="lnkCoreData" runat="server" CssClass="lnkCoreData" />
 		    </li>
-		   
 		    <li id="liAdvancedTools" runat="server">
 		        <asp:HyperLink ID="lnkAdvancedTools" runat="server" CssClass="lnkAdvancedTools" />
 		    </li>
@@ -61,8 +60,7 @@
 		    <asp:Literal ID="litSupplementalLinks" runat="server" />
 		</ul>
 	</div>	
-	</portal:CPanel>
-	<div class="cleared"></div>
+</portal:CPanel>
 </asp:Panel>
 <cy:CornerRounderBottom id="cbottom1" runat="server" />
 </portal:CPanel>

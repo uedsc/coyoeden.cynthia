@@ -102,10 +102,10 @@
 <div id="footer" class="clearfix">
 	<div class="container clearfix">
 		<div class="fleft">
-			<h4>注意!</h4>
-			<p>请不要使用IE6及以下版本浏览器!推荐使用Google Chrome或者Firefox！</p>
+			<h4>提醒!</h4>
+			<p>推荐使用Google Chrome或者Firefox！</p>
 			<h4>Notice!</h4>
-			<p>Don't use IE6 When browsing my site!Google Chrome and Firefox are recommended! </p>
+			<p>Google Chrome and Firefox are recommended! </p>
 		</div>
 		<div class="fright sprite">
 			<div id="updates">

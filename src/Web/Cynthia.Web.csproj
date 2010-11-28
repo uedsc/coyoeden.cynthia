@@ -3381,7 +3381,6 @@
     <Content Include="Data\skins\styleshout-techmania\styleblog.css" />
     <Content Include="Data\skins\styleshout-techmania\styledatacalendar.css" />
     <Content Include="Data\skins\styleshout-techmania\stylefeedmanager.css" />
-    <Content Include="Data\skins\styleshout-techmania\styleforum.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CCaptcha.config" />
