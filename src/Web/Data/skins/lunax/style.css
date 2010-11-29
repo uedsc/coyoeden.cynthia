@@ -49,13 +49,17 @@ text-transform:none;
 /*common-buttons*/
 input, .btn{
 -moz-border-radius:11px 11px 11px 11px;
+-webkit-border-radius:11px;
+border-radius:11px;
 -moz-box-sizing:content-box;
+-webkit-box-sizing:content-box;
+box-sizing:content-box;
 border-style:solid;
 border-width:1px;
 line-height:13px;
 padding:3px 8px;
 }
-.btn{cursor:pointer;}
+.btn,input[type="submit"],input[type="button"]{cursor:pointer;}
 input[type="checkbox"], input[type="radio"] {
 	vertical-align:middle;
 	margin-right:4px;
@@ -70,11 +74,16 @@ input, select {
 }
 textarea, input[type="text"], input[type="password"], input[type="file"], select {
 	-moz-border-radius:4px 4px 4px 4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
 	border-style:solid;
 	border-width:1px;
 }
 input[type="text"], input[type="password"], textarea {
-	-moz-box-sizing:border-box;
+	-moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+
 }
 .input-link, .input-link-activated, .input-link-dark { float: left; display: block; height: 22px; background-position: 0px -358px; padding-left: 5px; font-size: 0.75em; color: #ffffff; text-decoration: none; line-height: 22px; overflow: hidden; margin: 0px 0px; }
 .input-link span, .input-link-activated span, .input-link-dark span { background-position: right -358px; padding: 0px 10px 0px 5px; display: block; float: left; position: relative; text-transform: uppercase; color: #ffffff; }
@@ -296,6 +305,8 @@ h2.moduletitle {padding:6.18px 0 3px 6.18px;font-size:1.5em; font-weight:700; te
 fieldset { border:3px solid #E8E8E8; margin:0 5px 7px 3px; padding:1em; }
 legend { font-size:larger; font-weight:700; }
 .login legend{width:32px;height:32px;background:url("img/loginer.png") no-repeat center top;text-indent:-999px;overflow:hidden;}
+.login .txterror,.login .form-acts{padding-left:85px;}
+.form-acts a{margin-right:10px;}
 ol.formlist { list-style:none; margin: 0px; }
 li.settingrow  { list-style:none; }
 .settinglabel { float:left; clear:left; width:20em; padding:1px; }
@@ -303,7 +314,7 @@ li.settingrow  { list-style:none; }
 .settingrow {padding:4px 0;zoom:1; }
 .settingrow:after{content:'\20';display:block;clear:both;}
 .settingrow label,.settingrow input{float:left;}
-.settingrow label{width:80px;text-align:right;}
+.settingrow label{width:80px;text-align:right;border-right:2px solid #D2D1D0;margin-top:2px;padding:1px 3px 2px 0;background:#e3e3e3;font-size:0.92em;}
 .settinglabeltight { float:left; clear:left; width:8em; font-weight:700; padding:1px; }
 .settingrowtight { clear:left; padding:1px 0; }
 .settinglabel,.settinglabelFixedHeight { font-weight:700; font-size:smaller; }
@@ -326,9 +337,20 @@ input.openid_login { background:url('openidlogin.gif') no-repeat; background-col
 li.topnavitem { float:left; list-style-type:none;padding:0 7px; }
 li.firstnav { float:left; list-style-type:none; padding:0 7px 0 5px; }
 .simplelist li { list-style:none; padding:0 0 4px 0px; }
-.hlist li{float:left;display:inline;}
-.hlist li a{display:block;width:100px;height:61.8px;margin:5px;padding:5px;background:#eee;border:2px solid #e3e3e3;}
-.hlist li a:hover{border-color:#dfdfdf;background:#333;}
+.hlist li
+{
+    float:left;display:inline;   
+    border: 1px solid #d7d7d7;
+    margin:5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 6px #fff;
+    -moz-box-shadow: 1px 1px 6px #fff;
+    box-shadow: 1px 1px 6px #fff;
+}
+.hlist li a{display:block;width:100px;height:61.8px;padding:4px;background:#f4f4f4;border:2px solid #e3e3e3;}
+.hlist li a:hover{background:#333;color:#fff;font-weight:bold;}
 ul.linkitem { position:relative; top:-6px;left:0; list-style:none; margin:10px; padding:0; }
 div.sitemap ul,div.sitemap ul li { list-style:none; font-size:100%; }
 .site-statistics { border-bottom:solid thin #ccc; margin:0 0 5px; padding:0 0 5px; }

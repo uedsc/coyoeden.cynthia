@@ -47,7 +47,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Overrides the current topic's CurrentUICulture property for all
+        ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -10951,7 +10951,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to Password:.
         /// </summary>
         internal static string SignInPasswordLabel {
             get {

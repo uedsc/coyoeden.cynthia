@@ -1660,7 +1660,7 @@
     <value>Sign In</value>
   </data>
   <data name="SignInPasswordLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>Password:</value>
   </data>
   <data name="SignInRegisterLinkText" xml:space="preserve">
     <value>register</value>

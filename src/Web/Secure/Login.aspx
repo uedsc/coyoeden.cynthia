@@ -22,16 +22,30 @@
                 <cy:SiteLabel id="lblPassword" runat="server" ForControl="Password" ConfigKey="SignInPasswordLabel"> </cy:SiteLabel>
                 <asp:TextBox ID="Password" runat="server" TextMode="password" />
             </div>
+            <!--remember me-->
+            <%if (ShowRememberMe)
+              { %>
             <div class="settingrow">
-                <asp:CheckBox ID="RememberMe" runat="server" />
+                <label for="cbxRememberMe"><%=Resource.SignInSendRememberMeLabel%></label>
+                <input type="checkbox" id="cbxRememberMe" name="RememberMen" />
             </div>
-            <div class="settingrow">
+            <%} %>
+            <div class="settingrow form-acts">
                 <portal:CButton ID="Login" CommandName="Login" runat="server" Text="Login" />
-                <br /><portal:CLabel ID="FailureText" runat="server" CssClass="txterror" EnableViewState="false" />
             </div>
-            <div class="settingrow">
-                <asp:HyperLink ID="lnkPasswordRecovery" runat="server" />&nbsp;&nbsp;
-                <asp:HyperLink ID="lnkRegisterExtraLink" runat="server" />
+            <%if (!string.IsNullOrEmpty(this.LoginCtrl.FailureText))
+                { %>
+            <div class="settingrow txterror"><%=this.LoginCtrl.FailureText %></div>
+            <%} %>
+            <div class="settingrow form-acts">
+                <%if (ShowRecovery)
+                  { %>
+                <a id="lnkPwdSOS" href="<%=this.LoginCtrl.PasswordRecoveryUrl %>"><%=this.LoginCtrl.PasswordRecoveryText%></a>
+                <%} %>
+                <%if (ShowRegister)
+                  { %>
+                <a id="lnkRegister" href="<%=SiteRoot %>/Secure/Register.aspx<%=ReturnUrl %>"><%=Resource.RegisterLink%></a>
+                <%} %>
             </div>
             </asp:Panel>
         </LayoutTemplate> 

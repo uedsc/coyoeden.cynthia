@@ -1,16 +1,3 @@
-/// Author:				        Joe Audette
-/// Created:			        2004-10-22
-///	Last Modified:              2009-12-19
-/// 
-/// 2007/06/06  Alexander Yushchenko: moved login logic into new SiteLogin control, refactoring
-///  
-/// The use and distribution terms for this software are covered by the 
-/// Common Public License 1.0 (http://opensource.org/licenses/cpl.php)
-/// which can be found in the file CPL.TXT at the root of this distribution.
-/// By using this software in any fashion, you are agreeing to be bound by 
-/// the terms of this license.
-///
-/// You must not remove this notice, or any other, from this software.
 
 using System;
 using System.Configuration;
@@ -38,14 +25,40 @@ namespace Cynthia.Web.UI.Pages
 		
 
 		private TextBox txtUserName;
-		private CheckBox chkRememberMe;
 		private CButton btnLogin;
-        private HyperLink lnkRecovery;
-        private HyperLink lnkExtraLink;
 		private TextBox txtPassword;
-		
 
-
+        /// <summary>
+        /// whether show remember me checkbox
+        /// </summary>
+        protected bool ShowRememberMe {
+            get {
+                return WebConfigSettings.AllowPersistentLoginCookie;
+            }
+        }
+        /// <summary>
+        /// whether show pwd recovery
+        /// </summary>
+        protected bool ShowRecovery {
+            get {
+                return siteSettings.AllowPasswordRetrieval && !siteSettings.UseLdapAuth;
+            }
+        }
+        /// <summary>
+        /// whether show the register link
+        /// </summary>
+        protected bool ShowRegister {
+            get {
+                return siteSettings.AllowNewRegistration;
+            }
+        }
+        protected string ReturnUrl {
+            get {
+                var url= Page.Request.Params.Get("returnurl");
+                url = string.IsNullOrEmpty(url) ? "" : "?returnurl="+url;
+                return url;
+            }
+        }
 
         override protected void OnInit(EventArgs e)
         {
@@ -132,10 +145,7 @@ namespace Cynthia.Web.UI.Pages
             lblEmail = (SiteLabel)this.LoginCtrl.FindControl("lblEmail");
             txtUserName = (TextBox)this.LoginCtrl.FindControl("UserName");
             txtPassword = (TextBox)this.LoginCtrl.FindControl("Password");
-            chkRememberMe = (CheckBox)this.LoginCtrl.FindControl("RememberMe");
             btnLogin = (CButton)this.LoginCtrl.FindControl("Login");
-            lnkRecovery = (HyperLink)this.LoginCtrl.FindControl("lnkPasswordRecovery");
-            lnkExtraLink = (HyperLink)this.LoginCtrl.FindControl("lnkRegisterExtraLink");
 
             
 
@@ -231,24 +241,6 @@ namespace Cynthia.Web.UI.Pages
 			}
 
             txtUserName.Focus();
-
-            lnkRecovery.Visible = siteSettings.AllowPasswordRetrieval && !siteSettings.UseLdapAuth;
-            lnkRecovery.NavigateUrl = this.LoginCtrl.PasswordRecoveryUrl;
-            lnkRecovery.Text = this.LoginCtrl.PasswordRecoveryText;
-
-            lnkExtraLink.NavigateUrl = SiteRoot + "/Secure/Register.aspx";
-            lnkExtraLink.Text = Resource.RegisterLink;
-            lnkExtraLink.Visible = siteSettings.AllowNewRegistration;
-
-            string returnUrlParam = Page.Request.Params.Get("returnurl");
-            if (!String.IsNullOrEmpty(returnUrlParam))
-            {
-                //string redirectUrl = returnUrlParam;
-                lnkExtraLink.NavigateUrl += "?returnurl=" + returnUrlParam;
-            }
-
-            chkRememberMe.Visible = WebConfigSettings.AllowPersistentLoginCookie;
-            chkRememberMe.Text = this.LoginCtrl.RememberMeText;
 
             btnLogin.Text = this.LoginCtrl.LoginButtonText;
             SiteUtils.SetButtonAccessKey(btnLogin, AccessKeys.LoginAccessKey);

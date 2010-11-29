@@ -34,7 +34,7 @@ namespace Cynthia.Web.UI
 
             this.CreateUserText = Resource.SignInRegisterLinkText;
             this.CreateUserUrl = siteRoot + "/Secure/Register.aspx";
-            this.FailureText = ResourceHelper.GetMessageTemplate("LoginFailedMessage.config");
+            this.FailureText = "";//ResourceHelper.GetMessageTemplate("LoginFailedMessage.config");
             this.LoginButtonText = Resource.SignInLinkText;
             this.PasswordRecoveryText = Resource.SignInSendPasswordButton;
             this.PasswordRecoveryUrl = siteRoot + "/Secure/RecoverPassword.aspx";
@@ -95,6 +95,7 @@ namespace Cynthia.Web.UI
         {
             int errorCount = (int)ViewState["LoginErrorCount"] + 1;
             ViewState["LoginErrorCount"] = errorCount;
+            FailureText = ResourceHelper.GetMessageTemplate("LoginFailedMessage.config");
 
             if ((siteSettings != null)
                 && (!siteSettings.UseLdapAuth)
@@ -118,37 +119,24 @@ namespace Cynthia.Web.UI
                 {
                     // user has not confirmed
                     e.Cancel = true;
-                    //this.FailureText = Resource.LoginUnconfirmedEmailMessage;
-                    Label lblFailure = (Label)this.FindControl("FailureText");
-                    if (lblFailure != null)
-                    {
-                        lblFailure.Visible = true;
-                        lblFailure.Text = Resource.LoginUnconfirmedEmailMessage;
+                    this.FailureText = Resource.LoginUnconfirmedEmailMessage;
+                    // send email with confirmation link that will approve profile
+                    Notification.SendRegistrationConfirmationLink(
+                        SiteUtils.GetSmtpSettings(),
+                        ResourceHelper.GetMessageTemplate("RegisterConfirmEmailMessage.config"),
+                        siteSettings.DefaultEmailFromAddress,
+                        siteUser.Email,
+                        siteSettings.SiteName,
+                        WebUtils.GetSiteRoot() + "/ConfirmRegistration.aspx?ticket=" +
+                        siteUser.RegisterConfirmGuid.ToString());
 
-                        // send email with confirmation link that will approve profile
-                        Notification.SendRegistrationConfirmationLink(
-                            SiteUtils.GetSmtpSettings(),
-                            ResourceHelper.GetMessageTemplate("RegisterConfirmEmailMessage.config"),
-                            siteSettings.DefaultEmailFromAddress,
-                            siteUser.Email,
-                            siteSettings.SiteName,
-                            WebUtils.GetSiteRoot() + "/ConfirmRegistration.aspx?ticket=" +
-                            siteUser.RegisterConfirmGuid.ToString());
-
-                        return;
-                    }
+                    return;
                 }
 
                 if (siteUser.IsLockedOut)
                 {
                     e.Cancel = true;
-                    //this.FailureText = Resource.LoginAccountLockedMessage;
-                    Label lblFailure = (Label)this.FindControl("FailureText");
-                    if (lblFailure != null)
-                    {
-                        lblFailure.Visible = true;
-                        lblFailure.Text = Resource.LoginAccountLockedMessage;
-                    }
+                    this.FailureText = Resource.LoginAccountLockedMessage;
                 }
             }
         }
@@ -195,25 +183,6 @@ namespace Cynthia.Web.UI
         }
 
         #region Events
-
-        //private void HookupSignInEventHandlers()
-        //{
-        //    // this is a hook so that custom code can be fired when pages are created
-        //    // implement a PageCreatedEventHandlerPovider and put a config file for it in
-        //    // /Setup/ProviderConfig/pagecreatedeventhandlers
-        //    try
-        //    {
-        //        foreach (UserSignInHandlerProvider handler in UserSignInHandlerProviderManager.Providers)
-        //        {
-        //            this.UserSignIn += handler.UserSignInEventHandler;
-        //        }
-        //    }
-        //    catch (TypeInitializationException ex)
-        //    {
-        //        log.Error(ex);
-        //    }
-
-        //}
 
         //public event UserSignInEventHandler UserSignIn;
 
